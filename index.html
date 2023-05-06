@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+<style> .cont{
+border:3px solid rgb(222, 103, 103) ;
+width: 250px;
+box-shadow:5px 10px 5px 1px gray ;
+/* height: 250px; */
+border-radius: 10px;
+} </style>
+
+</head>
+<body>
+    <center>
+        
+        <h1>Calculator</h1>
+        <div class="cont">
+            <br>
+            
+            <div class="input-group mb-3">
+          &nbsp;     &nbsp;         <input type="text" id="inp" class="form-control" placeholder="Enter Values" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="exe()" class="btn btn-outline-success "type="button" id="button-addon2">=</button>
+                &nbsp;          &nbsp;    
+            </div>
+           
+                                      <button type="button" onclick="AT_add(0)"  class="btn btn-outline-success  ">0</button>
+                        <button type="button" onclick="AT_add(1)" class="btn btn-outline-success ">1</button>
+                        <button type="button" onclick="AT_add(2)" class="btn btn-outline-success ">2</button>
+                        <button type="button" onclick="AT_add(3)" class="btn btn-outline-success ">3</button>
+                        <button type="button" onclick="AT_add(4)" class="btn btn-outline-success ">4</button>
+                        
+                        <br>
+                        
+                        <button type="button" onclick="AT_add(5)"  class="btn btn-outline-success  mt-2">5</button>
+                        <button type="button" onclick="AT_add(6)" class="btn btn-outline-success mt-2">6</button>
+                        <button type="button" onclick="AT_add(7)" class="btn btn-outline-success mt-2">7</button>
+                        <button type="button" onclick="AT_add(8)" class="btn btn-outline-success mt-2">8</button>
+                        <button type="button" onclick="AT_add(9)" class="btn btn-outline-success mt-2">9</button>
+                        <br>
+                        
+                        <button onclick="AT_add('+')" class="btn btn-outline-success mt-2"  >+</button>
+                        <button onclick="AT_add('-')" class="btn btn-outline-success mt-2"  >-</button>
+                        <button onclick="AT_add('/')" class="btn btn-outline-success mt-2"  >/</button>
+                        <button onclick="AT_add('*')" class="btn btn-outline-success mt-2"  >*</button>
+                        <button onclick="cls()" class="btn btn-outline-success mt-2" >c</button><br>
+                        <button onclick="sqr()" class="btn btn-outline-success mt-2" >Squar Root</button>
+                        <button onclick="pow()" class="btn btn-outline-success mt-2" >Power</button><br><br>
+                      
+                    </div>
+                    </center>
+                    <script>
+        var val=document.getElementById("inp");
+        
+        function AT_add(v){
+        val.value+=v;
+        }
+        
+        
+        function cls(){
+        val.value="";
+        }
+        
+        function exe(){
+        val.value=eval(val.value);
+    }
+    
+    function pow(){
+        
+        val.value=Math.pow(val.value,2);
+
+
+        // var squar=Math.sqrt(val)
+        // document.getElementById('inp').innerHTML=squar
+        }
+    
+    function sqr(){
+        
+        val.value=Math.sqrt(val.value);
+
+
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
